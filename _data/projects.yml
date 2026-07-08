@@ -1,32 +1,47 @@
-# Add or edit projects here. Nothing else needs to change when you add one —
-# the homepage and /projects/ page both pull from this file automatically.
+# Every project needs a `category`: "software" or "hardware".
+# That's what powers the two sections on the homepage and /projects/.
 #
-# demo: leave blank ("") if there's no live link.
+# Hardware-specific fields:
+#   image   — path to a photo, e.g. /assets/img/pedal-01.jpg (leave "" to skip)
+#   writeup — path to a blog post about the build, if you wrote one (optional)
+# repo and demo are optional too — leave "" if not applicable.
 
 - name: project-one
+  category: software
   description: "One line on what it does and why it exists, not how it's built."
   tags: [Python, CLI]
   repo: https://github.com/lucasbucht/project-one
   demo: ""
+  image: ""
+  writeup: ""
   year: 2026
 
 - name: project-two
+  category: software
   description: "Same deal — plain-language summary, no jargon."
   tags: [TypeScript, React]
   repo: https://github.com/lucasbucht/project-two
   demo: ""
+  image: ""
+  writeup: ""
   year: 2026
 
-- name: project-three
-  description: "Keep these short. The repo link is where the detail lives."
-  tags: [Go]
-  repo: https://github.com/lucasbucht/project-three
+- name: tweed-deluxe-recap
+  category: hardware
+  description: "Full recap and bias adjustment on a 1960s tweed-style amp that was drifting out of spec."
+  tags: [Amp Repair, Tube]
+  repo: ""
   demo: ""
-  year: 2025
+  image: ""
+  writeup: ""
+  year: 2026
 
-- name: project-four
-  description: "Fourth featured project."
-  tags: [Rust, Systems]
-  repo: https://github.com/lucasbucht/project-four
+- name: fuzz-face-clone
+  category: hardware
+  description: "Hand-wired fuzz pedal build, germanium transistors, true bypass."
+  tags: [Pedal Build, Analog]
+  repo: ""
   demo: ""
+  image: ""
+  writeup: ""
   year: 2025
