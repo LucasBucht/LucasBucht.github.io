@@ -26,10 +26,10 @@
   writeup: ""
   year: 2026
 
-- name: tweed-deluxe-recap
+- name: Fuzz Guitar Pedal
   category: hardware
-  description: "Full recap and bias adjustment on a 1960s tweed-style amp that was drifting out of spec."
-  tags: [Amp Repair, Tube]
+  description: "Designed, prototyped, built, and revised a custom fuzz pedal using an TL072 op-amp clipping circuit."
+  tags: [Prototyping, Signal Processing, Altium Designer, Analog Circuit Design]
   repo: ""
   demo: ""
   image: ""
