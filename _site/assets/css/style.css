@@ -34,6 +34,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-
 
 .site-nav a:hover { color: var(--teal); text-decoration: none; }
 
+.site-nav a.active { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--teal); padding-bottom: 4px; }
+
+.site-nav a.active:hover { color: var(--ink); }
+
 /* ---- Hero ---- */
 .hero { padding: 60px 24px 8px; }
 
