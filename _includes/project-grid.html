@@ -1,0 +1,18 @@
+<div class="project-grid">
+  {% for project in projects %}
+  <article class="project-card">
+    <div class="project-card__top">
+      <h3 class="project-card__name">{{ project.name }}</h3>
+      <span class="project-card__year">{{ project.year }}</span>
+    </div>
+    <p class="project-card__desc">{{ project.description }}</p>
+    <div class="project-card__tags">
+      {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </div>
+    <div class="project-card__links">
+      <a href="{{ project.repo }}" target="_blank" rel="noopener">repo &rarr;</a>
+      {% if project.demo != "" %}<a href="{{ project.demo }}" target="_blank" rel="noopener">demo &rarr;</a>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
