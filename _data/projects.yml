@@ -6,11 +6,11 @@
 #   writeup — path to a blog post about the build, if you wrote one (optional)
 # repo and demo are optional too — leave "" if not applicable.
 
-- name: project-one
+- name: VHDL ALU Calculator
   category: software
-  description: "One line on what it does and why it exists, not how it's built."
-  tags: [Python, CLI]
-  repo: https://github.com/lucasbucht/project-one
+  description: "Built a complete datapathin Siemens HDL Designer, including a 4x8 register and ALU."
+  tags: [VHDL, ALU, Datapath, ModelSim, Quartus Prime, DE10-Lite FPGA]
+  repo: https://github.com/LucasBucht/Pitt-ECE0201/tree/main/Datapath_and_Control
   demo: ""
   image: ""
   writeup: ""
