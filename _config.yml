@@ -1,3 +1,41 @@
-theme: jekyll-theme-minimal
-title: Lucas Bucht's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Lucas Bucht
+tagline: "Electrical Engineer — building things, writing about it."
+description: >-
+  Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of
+  whatever I'm currently breaking.
+url: "https://lucasbucht.github.io"
+baseurl: ""
+
+author:
+  name: Lucas Bucht
+  github: lucasbucht
+  # TODO: swap in your real links
+  linkedin: ""
+  email: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
