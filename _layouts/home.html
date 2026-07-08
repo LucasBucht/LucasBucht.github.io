@@ -1,26 +1,43 @@
 <section class="hero wrap">
-  <p class="hero__eyebrow">$ whoami</p>
   <h1 class="hero__name">{{ site.author.name }}</h1>
   <p class="hero__tagline">{{ site.tagline }}</p>
   <p class="hero__bio">
-    <!-- TODO: replace with 2-3 real sentences. What do you build, what are you
-    looking for, what's one thing worth knowing about how you work. -->
-    I'm a software engineer who likes shipping small, useful things and writing
-    down what breaks along the way. Currently looking for opportunities where
-    I can do more of both.
+    <!-- TODO: replace with 2-3 real sentences covering both sides — software
+    projects and the amp/pedal work — plus what you're looking for. -->
+    I'm a software engineer who also spends a lot of time on the electrical
+    side of things: fixing amps, building guitar pedals, and generally
+    enjoying projects that involve a soldering iron as much as a keyboard.
   </p>
 </section>
 
-<div class="hunk-divider wrap"><span>@@ -0,0 +1,{{ site.data.projects.size }} @@ featured projects</span></div>
+{% assign software = site.data.projects | where: "category", "software" %}
+{% assign hardware = site.data.projects | where: "category", "hardware" %}
 
+<div class="section-label wrap">
+  <span class="dot dot--software"></span>
+  <span class="section-label__text">Software</span>
+  <span class="section-label__line"></span>
+</div>
 <section class="wrap">
-  {% assign featured = site.data.projects | slice: 0, 3 %}
-  {% include project-grid.html projects=featured %}
+  {% assign featured_sw = software | slice: 0, 3 %}
+  {% include project-grid.html projects=featured_sw %}
+</section>
+
+<div class="section-label wrap">
+  <span class="dot dot--hardware"></span>
+  <span class="section-label__text">Hardware</span>
+  <span class="section-label__line"></span>
+</div>
+<section class="wrap">
+  {% assign featured_hw = hardware | slice: 0, 3 %}
+  {% include project-grid.html projects=featured_hw %}
   <p class="see-all"><a href="{{ '/projects/' | relative_url }}">all projects &rarr;</a></p>
 </section>
 
-<div class="hunk-divider wrap"><span>@@ -0,0 +1,{{ site.posts.size }} @@ writing</span></div>
-
+<div class="section-label wrap">
+  <span class="section-label__text">Writing</span>
+  <span class="section-label__line"></span>
+</div>
 <section class="wrap">
   <ul class="post-list">
     {% for post in site.posts limit: 3 %}
