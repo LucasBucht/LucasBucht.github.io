@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Update: EE-focused redesign | Lucas Bucht</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Update: EE-focused redesign" />
+<meta name="author" content="Lucas Bucht" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of whatever I’m currently breaking." />
+<meta property="og:description" content="Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of whatever I’m currently breaking." />
+<link rel="canonical" href="http://localhost:4000/UPDATE/" />
+<meta property="og:url" content="http://localhost:4000/UPDATE/" />
+<meta property="og:site_name" content="Lucas Bucht" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Update: EE-focused redesign" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Lucas Bucht"},"description":"Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of whatever I’m currently breaking.","headline":"Update: EE-focused redesign","url":"http://localhost:4000/UPDATE/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="Lucas Bucht" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="/">
+      Lucas Bucht
+    </a>
+    <nav class="site-nav">
+      <a href="/">home</a>
+      <a href="/projects/">projects</a>
+      <a href="/blog/">writing</a>
+      <a href="https://github.com/lucasbucht" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="site-main">
+    <h1 id="update-ee-focused-redesign">Update: EE-focused redesign</h1>
+
+<p>You’ve already got real content in your live repo, so don’t just overwrite
+everything blindly. Here’s exactly what changed:</p>
+
+<h2 id="safe-to-fully-overwrite-no-personalization-risk">Safe to fully overwrite (no personalization risk)</h2>
+
+<p>These are templates/styles, not content — replace them wholesale:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">assets/css/style.scss</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_includes/header.html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_includes/project-grid.html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_layouts/default.html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_layouts/home.html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">_layouts/post.html</code></li>
+  <li><code class="language-plaintext highlighter-rouge">projects.html</code></li>
+</ul>
+
+<h2 id="needs-manual-merge-youve-probably-edited-these">Needs manual merge (you’ve probably edited these)</h2>
+
+<p><strong><code class="language-plaintext highlighter-rouge">_data/projects.yml</code></strong> — every entry now needs a <code class="language-plaintext highlighter-rouge">category: software</code> or
+<code class="language-plaintext highlighter-rouge">category: hardware</code> line, or it won’t show up on the homepage or /projects/
+sections. Take your real project entries and add that one field to each.
+New optional fields, add only where useful:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">image</code> — path to a photo (hardware builds especially benefit — a fuzz
+pedal without a picture is a hard sell)</li>
+  <li><code class="language-plaintext highlighter-rouge">writeup</code> — link to a blog post about the build, if <code class="language-plaintext highlighter-rouge">repo</code> doesn’t apply</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">repo</code> and <code class="language-plaintext highlighter-rouge">demo</code> are now optional — leave <code class="language-plaintext highlighter-rouge">""</code> if a hardware project doesn’t
+have one.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">_config.yml</code></strong> — only the <code class="language-plaintext highlighter-rouge">tagline</code> line changed. Update yours to mention
+both sides of what you do, or leave your own wording.</p>
+
+<h2 id="what-got-removed">What got removed</h2>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">$ whoami</code> terminal eyebrow — gone.</li>
+  <li>The blinking-cursor logo — gone, now a plain wordmark.</li>
+  <li>The diff-hunk-header dividers (<code class="language-plaintext highlighter-rouge">@@ ... @@</code>) — replaced with a plain
+labeled rule that uses the same teal/amber dot system as the project
+cards, so software vs. hardware is visually consistent everywhere.</li>
+</ul>
+
+<h2 id="adding-photos">Adding photos</h2>
+
+<p>Drop image files into <code class="language-plaintext highlighter-rouge">assets/img/</code> (create the folder), then reference them
+in <code class="language-plaintext highlighter-rouge">projects.yml</code> as <code class="language-plaintext highlighter-rouge">image: /assets/img/your-photo.jpg</code>. Keep them under
+~500KB each so the page loads fast — resize before uploading if your camera
+shoots large files.</p>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span>&copy; 2026 Lucas Bucht</span>
+    <div class="site-footer__links">
+      <a href="https://github.com/lucasbucht" target="_blank" rel="noopener">GitHub</a>
+      
+      
+      <a href="/feed.xml">RSS</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setup guide | Lucas Bucht</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Setup guide" />
+<meta name="author" content="Lucas Bucht" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of whatever I’m currently breaking." />
+<meta property="og:description" content="Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of whatever I’m currently breaking." />
+<link rel="canonical" href="http://localhost:4000/SETUP/" />
+<meta property="og:url" content="http://localhost:4000/SETUP/" />
+<meta property="og:site_name" content="Lucas Bucht" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setup guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Lucas Bucht"},"description":"Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of whatever I’m currently breaking.","headline":"Setup guide","url":"http://localhost:4000/SETUP/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="Lucas Bucht" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="/">
+      Lucas Bucht
+    </a>
+    <nav class="site-nav">
+      <a href="/">home</a>
+      <a href="/projects/">projects</a>
+      <a href="/blog/">writing</a>
+      <a href="https://github.com/lucasbucht" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="site-main">
+    <h1 id="setup-guide">Setup guide</h1>
+
+<h2 id="1-merge-into-your-existing-repo">1. Merge into your existing repo</h2>
+
+<p>You already have <code class="language-plaintext highlighter-rouge">lucasbucht.github.io</code> with a README, LICENSE, and <code class="language-plaintext highlighter-rouge">_config.yml</code>.
+Don’t clone this as a new repo — copy these files into your existing one instead:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>path/to/lucasbucht.github.io
+<span class="c"># copy every file from this bundle into the repo root, overwriting the</span>
+<span class="c"># existing _config.yml (it's just the GitHub default, safe to replace)</span>
+git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Set up Jekyll portfolio + blog"</span>
+git push
+</code></pre></div></div>
+
+<p>GitHub Pages will pick it up automatically. Give it 1-2 minutes, then check
+<code class="language-plaintext highlighter-rouge">https://lucasbucht.github.io</code>.</p>
+
+<h2 id="2-what-to-edit-before-you-call-it-done">2. What to edit before you call it done</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">_config.yml</code></strong> — set <code class="language-plaintext highlighter-rouge">author.linkedin</code> and <code class="language-plaintext highlighter-rouge">author.email</code> (leave <code class="language-plaintext highlighter-rouge">""</code> to hide
+that footer link entirely).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_layouts/home.html</code></strong> — replace the placeholder bio paragraph with 2-3 real
+sentences about what you build and what you’re looking for.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_data/projects.yml</code></strong> — replace the 4 placeholder entries with your real
+projects. This is the only file you touch to add/remove/reorder projects —
+the homepage and <code class="language-plaintext highlighter-rouge">/projects/</code> page both read from it automatically.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">_posts/2026-07-08-hello-world.md</code></strong> — delete or replace with a real first
+post.</li>
+</ul>
+
+<h2 id="3-writing-new-blog-posts">3. Writing new blog posts</h2>
+
+<p>Add a file to <code class="language-plaintext highlighter-rouge">_posts/</code> named <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-slug.md</code>:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Your</span><span class="nv"> </span><span class="s">title</span><span class="nv"> </span><span class="s">here"</span>
+<span class="nn">---</span>
+
+Body in Markdown. Code blocks, images, links all work normally.
+</code></pre></div></div>
+
+<p>That’s it — it shows up on <code class="language-plaintext highlighter-rouge">/blog/</code> and the homepage automatically, sorted by date.</p>
+
+<h2 id="4-testing-locally-before-you-push-optional-but-recommended">4. Testing locally before you push (optional but recommended)</h2>
+
+<p>Requires Ruby. One-time setup:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
+bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>Then, every time you want to preview:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>Open <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>. Ctrl+C to stop.</p>
+
+<p>If you don’t want to install Ruby locally, you can skip this and just push —
+GitHub Pages builds it for you, you’ll just see changes live instead of in
+preview.</p>
+
+<h2 id="5-custom-domain-optional-later">5. Custom domain (optional, later)</h2>
+
+<p>If you ever want <code class="language-plaintext highlighter-rouge">lucasbucht.dev</code> instead of the <code class="language-plaintext highlighter-rouge">.github.io</code> URL, add a
+<code class="language-plaintext highlighter-rouge">CNAME</code> file with just the domain in it, and point your domain’s DNS at
+GitHub Pages. Not needed now — just flagging it’s a later, easy upgrade.</p>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span>&copy; 2026 Lucas Bucht</span>
+    <div class="site-footer__links">
+      <a href="https://github.com/lucasbucht" target="_blank" rel="noopener">GitHub</a>
+      
+      
+      <a href="/feed.xml">RSS</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
