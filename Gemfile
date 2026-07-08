@@ -3,6 +3,9 @@ source "https://rubygems.org"
 gem "csv"
 gem "logger"
 gem "base64"
+gem "bigdecimal"
+gem "abbrev"
+gem "ostruct"
 
 gem "github-pages", group: :jekyll_plugins
 
