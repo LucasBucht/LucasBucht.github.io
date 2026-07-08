@@ -1,0 +1,14 @@
+---
+layout: page
+title: Writing
+permalink: /blog/
+---
+
+<ul class="post-list post-list--full">
+  {% for post in site.posts %}
+  <li class="post-list__row">
+    <time class="post-list__date">{{ post.date | date: "%Y-%m-%d" }}</time>
+    <a class="post-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
