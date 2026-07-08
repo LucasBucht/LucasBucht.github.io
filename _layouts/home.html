@@ -1,0 +1,34 @@
+<section class="hero wrap">
+  <p class="hero__eyebrow">$ whoami</p>
+  <h1 class="hero__name">{{ site.author.name }}</h1>
+  <p class="hero__tagline">{{ site.tagline }}</p>
+  <p class="hero__bio">
+    <!-- TODO: replace with 2-3 real sentences. What do you build, what are you
+    looking for, what's one thing worth knowing about how you work. -->
+    I'm a software engineer who likes shipping small, useful things and writing
+    down what breaks along the way. Currently looking for opportunities where
+    I can do more of both.
+  </p>
+</section>
+
+<div class="hunk-divider wrap"><span>@@ -0,0 +1,{{ site.data.projects.size }} @@ featured projects</span></div>
+
+<section class="wrap">
+  {% assign featured = site.data.projects | slice: 0, 3 %}
+  {% include project-grid.html projects=featured %}
+  <p class="see-all"><a href="{{ '/projects/' | relative_url }}">all projects &rarr;</a></p>
+</section>
+
+<div class="hunk-divider wrap"><span>@@ -0,0 +1,{{ site.posts.size }} @@ writing</span></div>
+
+<section class="wrap">
+  <ul class="post-list">
+    {% for post in site.posts limit: 3 %}
+    <li class="post-list__row">
+      <time class="post-list__date">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a class="post-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="see-all"><a href="{{ '/blog/' | relative_url }}">all posts &rarr;</a></p>
+</section>
