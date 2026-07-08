@@ -1,5 +1,5 @@
 title: Lucas Bucht
-tagline: "Software engineer — also fixes amps and builds pedals."
+tagline: "Electrical Engineer interested in audio electronics and integrated circuits."
 description: >-
   Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of
   whatever I'm currently breaking.
@@ -10,8 +10,8 @@ author:
   name: Lucas Bucht
   github: lucasbucht
   # TODO: swap in your real links
-  linkedin: ""
-  email: ""
+  linkedin: "https://www.linkedin.com/in/lucasbucht/"
+  email: "mailto:LMB290@pitt.edu"
 
 markdown: kramdown
 highlighter: rouge
