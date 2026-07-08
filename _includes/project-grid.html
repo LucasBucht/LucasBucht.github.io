@@ -1,17 +1,25 @@
 <div class="project-grid">
   {% for project in projects %}
-  <article class="project-card">
-    <div class="project-card__top">
-      <h3 class="project-card__name">{{ project.name }}</h3>
-      <span class="project-card__year">{{ project.year }}</span>
-    </div>
-    <p class="project-card__desc">{{ project.description }}</p>
-    <div class="project-card__tags">
-      {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-    </div>
-    <div class="project-card__links">
-      <a href="{{ project.repo }}" target="_blank" rel="noopener">repo &rarr;</a>
-      {% if project.demo != "" %}<a href="{{ project.demo }}" target="_blank" rel="noopener">demo &rarr;</a>{% endif %}
+  {% assign category = project.category | default: "software" %}
+  <article class="project-card project-card--{{ category }}">
+    {% if project.image and project.image != "" %}
+    <img class="project-card__image" src="{{ project.image | relative_url }}" alt="{{ project.name }}">
+    {% endif %}
+    <div class="project-card__body">
+      <div class="project-card__top">
+        <span class="dot dot--{{ category }}"></span>
+        <h3 class="project-card__name">{{ project.name }}</h3>
+        <span class="project-card__year">{{ project.year }}</span>
+      </div>
+      <p class="project-card__desc">{{ project.description }}</p>
+      <div class="project-card__tags">
+        {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
+      <div class="project-card__links">
+        {% if project.repo and project.repo != "" %}<a href="{{ project.repo }}" target="_blank" rel="noopener">repo &rarr;</a>{% endif %}
+        {% if project.demo and project.demo != "" %}<a href="{{ project.demo }}" target="_blank" rel="noopener">demo &rarr;</a>{% endif %}
+        {% if project.writeup and project.writeup != "" %}<a href="{{ project.writeup | relative_url }}">writeup &rarr;</a>{% endif %}
+      </div>
     </div>
   </article>
   {% endfor %}
