@@ -1,0 +1,32 @@
+# Add or edit projects here. Nothing else needs to change when you add one —
+# the homepage and /projects/ page both pull from this file automatically.
+#
+# demo: leave blank ("") if there's no live link.
+
+- name: project-one
+  description: "One line on what it does and why it exists, not how it's built."
+  tags: [Python, CLI]
+  repo: https://github.com/lucasbucht/project-one
+  demo: ""
+  year: 2026
+
+- name: project-two
+  description: "Same deal — plain-language summary, no jargon."
+  tags: [TypeScript, React]
+  repo: https://github.com/lucasbucht/project-two
+  demo: ""
+  year: 2026
+
+- name: project-three
+  description: "Keep these short. The repo link is where the detail lives."
+  tags: [Go]
+  repo: https://github.com/lucasbucht/project-three
+  demo: ""
+  year: 2025
+
+- name: project-four
+  description: "Fourth featured project."
+  tags: [Rust, Systems]
+  repo: https://github.com/lucasbucht/project-four
+  demo: ""
+  year: 2025
