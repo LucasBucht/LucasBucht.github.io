@@ -1,8 +1,8 @@
 title: Lucas Bucht
-tagline: "Software engineer — also fixes amps and builds pedals."
+tagline: "Electrical engineer interested in audio electronics and integrated circuits."
 # Path to a homepage banner photo, e.g. "/assets/img/banner.jpg".
 # Leave "" to skip the banner entirely.
-banner_image: "\assets\img\circuitboard.jpg"
+banner_image: "/assets/img/circuitboard.jpg"
 description: >-
   Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of
   whatever I'm currently breaking.
