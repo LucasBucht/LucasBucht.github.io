@@ -6,6 +6,9 @@ layout: default
 {% endif %}
 
 <section class="hero wrap">
+  {% if site.headshot_image and site.headshot_image != "" %}
+  <img class="hero__headshot" src="{{ site.headshot_image | relative_url }}" alt="{{ site.author.name }}">
+  {% endif %}
   <h1 class="hero__name">{{ site.author.name }}</h1>
   <p class="hero__tagline">{{ site.tagline }}</p>
   <p class="hero__bio">

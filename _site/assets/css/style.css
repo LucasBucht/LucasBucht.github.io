@@ -45,6 +45,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-
 /* ---- Hero ---- */
 .hero { padding: 60px 24px 8px; }
 
+.hero__headshot { display: block; width: 96px; height: 96px; object-fit: cover; border-radius: 50%; border: 3px solid var(--panel); box-shadow: 0 0 0 1px var(--rule); margin-bottom: 18px; }
+
 .hero__name { font-family: var(--display); font-size: 40px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
 
 .hero__tagline { font-size: 19px; color: var(--ink-soft); margin: 0 0 22px; }
