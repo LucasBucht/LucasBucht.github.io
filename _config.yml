@@ -1,5 +1,8 @@
 title: Lucas Bucht
-tagline: "Electrical Engineer interested in audio electronics and integrated circuits."
+tagline: "Software engineer — also fixes amps and builds pedals."
+# Path to a homepage banner photo, e.g. "/assets/img/banner.jpg".
+# Leave "" to skip the banner entirely.
+banner_image: "\assets\img\circuitboard.jpg"
 description: >-
   Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of
   whatever I'm currently breaking.
@@ -11,7 +14,7 @@ author:
   github: lucasbucht
   # TODO: swap in your real links
   linkedin: "https://www.linkedin.com/in/lucasbucht/"
-  email: "mailto:LMB290@pitt.edu"
+  email: "mailto:lmb290@pitt.edu"
 
 markdown: kramdown
 highlighter: rouge

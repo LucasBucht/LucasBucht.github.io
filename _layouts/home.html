@@ -1,12 +1,16 @@
 ---
 layout: default
 ---
+{% if site.banner_image and site.banner_image != "" %}
+<img class="hero-banner" src="{{ site.banner_image | relative_url }}" alt="">
+{% endif %}
+
 <section class="hero wrap">
   <h1 class="hero__name">{{ site.author.name }}</h1>
   <p class="hero__tagline">{{ site.tagline }}</p>
   <p class="hero__bio">
-    <!-- TODO: replace with 2-3 real sentences covering both sides — software
-    projects and the amp/pedal work — plus what you're looking for. -->
+    <!-- TODO: replace with 2-3 real sentences covering both sides — hardware
+    work and the software projects — plus what you're looking for. -->
     I'm a software engineer who also spends a lot of time on the electrical
     side of things: fixing amps, building guitar pedals, and generally
     enjoying projects that involve a soldering iron as much as a keyboard.
@@ -17,16 +21,6 @@ layout: default
 {% assign hardware = site.data.projects | where: "category", "hardware" %}
 
 <div class="section-label wrap">
-  <span class="dot dot--software"></span>
-  <span class="section-label__text">Software</span>
-  <span class="section-label__line"></span>
-</div>
-<section class="wrap">
-  {% assign featured_sw = software | slice: 0, 3 %}
-  {% include project-grid.html projects=featured_sw %}
-</section>
-
-<div class="section-label wrap">
   <span class="dot dot--hardware"></span>
   <span class="section-label__text">Hardware</span>
   <span class="section-label__line"></span>
@@ -34,6 +28,16 @@ layout: default
 <section class="wrap">
   {% assign featured_hw = hardware | slice: 0, 3 %}
   {% include project-grid.html projects=featured_hw %}
+</section>
+
+<div class="section-label wrap">
+  <span class="dot dot--software"></span>
+  <span class="section-label__text">Software</span>
+  <span class="section-label__line"></span>
+</div>
+<section class="wrap">
+  {% assign featured_sw = software | slice: 0, 3 %}
+  {% include project-grid.html projects=featured_sw %}
   <p class="see-all"><a href="{{ '/projects/' | relative_url }}">all projects &rarr;</a></p>
 </section>
 
