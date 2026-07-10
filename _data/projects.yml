@@ -28,7 +28,7 @@
 
 - name: Fuzz Guitar Pedal
   category: hardware
-  description: "Designed, prototyped, built, and revised a custom fuzz pedal using an TL072 op-amp clipping circuit."
+  description: "Designed, prototyped, built, and revised a custom fuzz pedal using an LM386 op-amp clipping circuit."
   tags: [Prototyping, Signal Processing, Altium Designer, Analog Circuit Design]
   repo: ""
   demo: ""

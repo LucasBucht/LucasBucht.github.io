@@ -92,7 +92,7 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ---- Hero ---- */
-.hero { padding: 60px 24px 8px; }
+.hero { padding: 75px 24px 8px; }
 .hero__headshot {
   display: block;
   width: 96px;
@@ -115,7 +115,7 @@ a:focus-visible, button:focus-visible {
   color: var(--ink-soft);
   margin: 0 0 22px;
 }
-.hero__bio { max-width: 620px; }
+.hero__bio { max-width: 720px; }
 
 /* ---- Section label (replaces the old diff-hunk divider) ---- */
 .section-label {
