@@ -1,19 +1,15 @@
 title: Lucas Bucht
 tagline: "Electrical engineer interested in audio electronics and integrated circuits."
-# Path to a homepage banner photo, e.g. "/assets/img/banner.jpg".
-# Leave "" to skip the banner entirely.
 banner_image: "/assets/img/banner_image.jpg"
 headshot_image: "/assets/img/headshot.jpg"
 description: >-
-  Portfolio and blog for Lucas Bucht. Projects, writing, and a bit of
-  whatever I'm currently breaking.
+  Electrical Engineer, Resident Assistant, Makerspace Mentor, Leadership Facilitator - Lucas Bucht
 url: "https://lucasbucht.github.io"
 baseurl: ""
 
 author:
   name: Lucas Bucht
   github: lucasbucht
-  # TODO: swap in your real links
   linkedin: "https://www.linkedin.com/in/lucasbucht/"
   email: "mailto:lmb290@pitt.edu"
 

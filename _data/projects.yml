@@ -1,11 +1,6 @@
-# Every project needs a `category`: "software" or "hardware".
-# That's what powers the two sections on the homepage and /projects/.
-#
-# Hardware-specific fields:
-#   image   — path to a photo, e.g. /assets/img/pedal-01.jpg (leave "" to skip)
-#   writeup — path to a blog post about the build, if you wrote one (optional)
-# repo and demo are optional too — leave "" if not applicable.
+# Projects page - Searchable tags and yearly formatting
 
+# Software
 - name: VHDL ALU Calculator
   category: software
   description: "Built a complete datapathin Siemens HDL Designer, including a 4x8 register and ALU."
@@ -26,6 +21,11 @@
   writeup: ""
   year: 2026
 
+
+
+
+
+# Hardware
 - name: Fuzz Guitar Pedal
   category: hardware
   description: "Designed, prototyped, built, and revised a custom fuzz pedal using an LM386 op-amp clipping circuit."
@@ -43,6 +43,16 @@
   repo: ""
   demo: ""
   image: "/assets/img/amp_recap.png"
+  writeup: ""
+  year: 2026
+
+- name: Squier Mustang Guitar Custom Build
+  category: hardware
+  description: "Wired, finished, and assembled a Squier Mustang guitar with a custom series/parallel pickup switch and sheilded cavity."
+  tags: [Guitar, Soldering, Woodworking]
+  repo: ""
+  demo: ""
+  image: "/assets/img/guitar.jpg"
   writeup: ""
   year: 2026
 
