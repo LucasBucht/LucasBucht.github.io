@@ -8,10 +8,18 @@ permalink: /projects/
 {% assign hardware = site.data.projects | where: "category", "hardware" %}
 {% assign nested_tags = site.data.projects | map: "tags" %}
 {% assign all_tags = nested_tags | flatten | uniq | sort %}
+{% assign popular_tags = "" | split: "," %}
+{% for tag in all_tags %}
+  {% assign matches = site.data.projects | where_exp: "project", "project.tags contains tag" %}
+  {% if matches.size > 1 %}
+    {% assign one = tag | split: "|" %}
+    {% assign popular_tags = popular_tags | concat: one %}
+  {% endif %}
+{% endfor %}
 
 <div class="filter-bar">
   <button class="filter-chip active" data-tag="all">All</button>
-  {% for tag in all_tags %}
+  {% for tag in popular_tags %}
   <button class="filter-chip" data-tag="{{ tag }}">{{ tag }}</button>
   {% endfor %}
 </div>
