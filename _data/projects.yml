@@ -42,6 +42,16 @@
   tags: [Amplifier, Debugging, Soldering, Signal Processing]
   repo: ""
   demo: ""
-  image: ""
+  image: "/assets/img/amp_recap.png"
   writeup: ""
   year: 2026
+
+- name: Sump Pump Exit Pipe One-Way Valve
+  category: hardware
+  description: "Designed, measured, and CADed a one way valve for a sump pump exit pipe to allow water and particulants through while preventing backflow or clogging."
+  tags: [CAD, Prototyping, 3D-Printing, Fusion 360]
+  repo: 
+  demo: ""
+  image: "/assets/img/sump_pump.png"
+  writeup: ""
+  year: 2025

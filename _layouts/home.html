@@ -13,8 +13,9 @@ layout: default
   <p class="hero__tagline">{{ site.tagline }}</p>
   <p class="hero__bio">
     I'm a junior electrical engineering student at the University of Pittsburgh who'd rather build something than buy it. 
-    I've designed a guitar fuzz pedal around an LM386 analog signal path, hand-built a guitar, restored vintage amplifiers, and worked through digital design fundamentals with a VHDL calculator on an FPGA. 
-    I'm drawn to integrated circuits and communications signals, and I'm always looking for the next interesting problem to dig into.
+    I've designed a guitar fuzz pedal around an LM386 analog signalpath, hand-built a guitar, restored vintage amplifiers, 
+    and worked through digital design fundamentals with a VHDL calculator on an FPGA. I'm drawn to integrated circuits 
+    and communications signals, and I'm always looking for the next interesting problem to dig into.
   </p>
 </section>
 
@@ -27,7 +28,8 @@ layout: default
   <span class="section-label__line"></span>
 </div>
 <section class="wrap">
-  {% assign featured_hw = hardware | slice: 0, 3 %}
+  {% assign hardware_sorted = hardware | sort: "year" | reverse %}
+  {% assign featured_hw = hardware_sorted | slice: 0, 2 %}
   {% include project-grid.html projects=featured_hw %}
 </section>
 
@@ -37,7 +39,8 @@ layout: default
   <span class="section-label__line"></span>
 </div>
 <section class="wrap">
-  {% assign featured_sw = software | slice: 0, 3 %}
+  {% assign software_sorted = software | sort: "year" | reverse %}
+  {% assign featured_sw = software_sorted | slice: 0, 2 %}
   {% include project-grid.html projects=featured_sw %}
   <p class="see-all"><a href="{{ '/projects/' | relative_url }}">all projects &rarr;</a></p>
 </section>

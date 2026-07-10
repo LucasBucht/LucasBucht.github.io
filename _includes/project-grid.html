@@ -1,7 +1,7 @@
 <div class="project-grid">
   {% for project in include.projects %}
   {% assign category = project.category | default: "software" %}
-  <article class="project-card project-card--{{ category }}">
+  <article class="project-card project-card--{{ category }}" data-tags="{{ project.tags | join: ',' }}">
     {% if project.image and project.image != "" %}
     <img class="project-card__image" src="{{ project.image | relative_url }}" alt="{{ project.name }}">
     {% endif %}

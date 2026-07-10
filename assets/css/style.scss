@@ -115,7 +115,7 @@ a:focus-visible, button:focus-visible {
   color: var(--ink-soft);
   margin: 0 0 22px;
 }
-.hero__bio { max-width: 720px; }
+.hero__bio { max-width: 100%; }
 
 /* ---- Section label (replaces the old diff-hunk divider) ---- */
 .section-label {
@@ -136,6 +136,38 @@ a:focus-visible, button:focus-visible {
   flex-grow: 1;
   height: 1px;
   background: var(--rule);
+}
+
+/* ---- Filter bar (projects page only) ---- */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.filter-chip {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.filter-chip:hover { border-color: var(--teal); color: var(--teal); }
+.filter-chip.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+.project-section { margin-bottom: 8px; }
+.filter-empty {
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 30px 0;
 }
 
 /* ---- Project grid ---- */

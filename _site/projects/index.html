@@ -49,15 +49,65 @@
   
 
 
-<div class="section-label" style="margin-top:0; padding:0;">
-  <span class="dot dot--hardware"></span>
-  <span class="section-label__text">Hardware</span>
-  <span class="section-label__line"></span>
+
+
+<div class="filter-bar">
+  <button class="filter-chip active" data-tag="all">All</button>
+  
+  <button class="filter-chip" data-tag="3D-Printing">3D-Printing</button>
+  
+  <button class="filter-chip" data-tag="ALU">ALU</button>
+  
+  <button class="filter-chip" data-tag="Altium Designer">Altium Designer</button>
+  
+  <button class="filter-chip" data-tag="Amplifier">Amplifier</button>
+  
+  <button class="filter-chip" data-tag="Analog Circuit Design">Analog Circuit Design</button>
+  
+  <button class="filter-chip" data-tag="CAD">CAD</button>
+  
+  <button class="filter-chip" data-tag="CSS">CSS</button>
+  
+  <button class="filter-chip" data-tag="DE10-Lite FPGA">DE10-Lite FPGA</button>
+  
+  <button class="filter-chip" data-tag="Datapath">Datapath</button>
+  
+  <button class="filter-chip" data-tag="Debugging">Debugging</button>
+  
+  <button class="filter-chip" data-tag="Fusion 360">Fusion 360</button>
+  
+  <button class="filter-chip" data-tag="HTML">HTML</button>
+  
+  <button class="filter-chip" data-tag="Jekyll">Jekyll</button>
+  
+  <button class="filter-chip" data-tag="ModelSim">ModelSim</button>
+  
+  <button class="filter-chip" data-tag="Portfolio">Portfolio</button>
+  
+  <button class="filter-chip" data-tag="Prototyping">Prototyping</button>
+  
+  <button class="filter-chip" data-tag="Quartus Prime">Quartus Prime</button>
+  
+  <button class="filter-chip" data-tag="Signal Processing">Signal Processing</button>
+  
+  <button class="filter-chip" data-tag="Soldering">Soldering</button>
+  
+  <button class="filter-chip" data-tag="VHDL">VHDL</button>
+  
+  <button class="filter-chip" data-tag="Website Design">Website Design</button>
+  
 </div>
-<div class="project-grid">
+
+<div class="project-section" data-section>
+  <div class="section-label" style="padding:0;">
+    <span class="dot dot--hardware"></span>
+    <span class="section-label__text">Hardware</span>
+    <span class="section-label__line"></span>
+  </div>
+  <div class="project-grid">
   
   
-  <article class="project-card project-card--hardware">
+  <article class="project-card project-card--hardware" data-tags="Prototyping,Signal Processing,Altium Designer,Analog Circuit Design">
     
     <div class="project-card__body">
       <div class="project-card__top">
@@ -78,7 +128,9 @@
   </article>
   
   
-  <article class="project-card project-card--hardware">
+  <article class="project-card project-card--hardware" data-tags="Amplifier,Debugging,Soldering,Signal Processing">
+    
+    <img class="project-card__image" src="/assets/img/amp_recap.png" alt="Vintage Amplifier Rebuild">
     
     <div class="project-card__body">
       <div class="project-card__top">
@@ -98,18 +150,43 @@
     </div>
   </article>
   
+  
+  <article class="project-card project-card--hardware" data-tags="CAD,Prototyping,3D-Printing,Fusion 360">
+    
+    <img class="project-card__image" src="/assets/img/sump_pump.png" alt="Sump Pump Exit Pipe One-Way Valve">
+    
+    <div class="project-card__body">
+      <div class="project-card__top">
+        <span class="dot dot--hardware"></span>
+        <h3 class="project-card__name">Sump Pump Exit Pipe One-Way Valve</h3>
+        <span class="project-card__year">2025</span>
+      </div>
+      <p class="project-card__desc">Designed, measured, and CADed a one way valve for a sump pump exit pipe to allow water and particulants through while preventing backflow or clogging.</p>
+      <div class="project-card__tags">
+        <span class="tag">CAD</span><span class="tag">Prototyping</span><span class="tag">3D-Printing</span><span class="tag">Fusion 360</span>
+      </div>
+      <div class="project-card__links">
+        
+        
+        
+      </div>
+    </div>
+  </article>
+  
 </div>
 
-
-<div class="section-label" style="padding:0;">
-  <span class="dot dot--software"></span>
-  <span class="section-label__text">Software</span>
-  <span class="section-label__line"></span>
 </div>
-<div class="project-grid">
+
+<div class="project-section" data-section>
+  <div class="section-label" style="padding:0;">
+    <span class="dot dot--software"></span>
+    <span class="section-label__text">Software</span>
+    <span class="section-label__line"></span>
+  </div>
+  <div class="project-grid">
   
   
-  <article class="project-card project-card--software">
+  <article class="project-card project-card--software" data-tags="VHDL,ALU,Datapath,ModelSim,Quartus Prime,DE10-Lite FPGA">
     
     <div class="project-card__body">
       <div class="project-card__top">
@@ -130,7 +207,7 @@
   </article>
   
   
-  <article class="project-card project-card--software">
+  <article class="project-card project-card--software" data-tags="HTML,CSS,Jekyll,Portfolio,Website Design">
     
     <div class="project-card__body">
       <div class="project-card__top">
@@ -152,6 +229,44 @@
   
 </div>
 
+</div>
+
+<p class="filter-empty" data-empty-message style="display:none;">
+  No projects match that tag.
+</p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var chips = document.querySelectorAll('.filter-chip');
+  var sections = document.querySelectorAll('[data-section]');
+  var emptyMsg = document.querySelector('[data-empty-message]');
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      var tag = chip.getAttribute('data-tag');
+      var anyVisible = false;
+
+      sections.forEach(function (section) {
+        var cards = section.querySelectorAll('.project-card');
+        var sectionHasVisible = false;
+
+        cards.forEach(function (card) {
+          var show = tag === 'all' || (card.getAttribute('data-tags') || '').split(',').indexOf(tag) !== -1;
+          card.style.display = show ? '' : 'none';
+          if (show) sectionHasVisible = true;
+        });
+
+        section.style.display = sectionHasVisible ? '' : 'none';
+        if (sectionHasVisible) anyVisible = true;
+      });
+
+      emptyMsg.style.display = anyVisible ? 'none' : '';
+    });
+  });
+});
+</script>
 
 </section>
 
