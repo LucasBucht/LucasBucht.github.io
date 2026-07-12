@@ -114,7 +114,17 @@ Eventually I got to a place where I was happy and had no concerns about the peda
 <br>
 
 ### Final Thoughts
-I never thought in a million years that I would be able to say that I built my own guitar pedal. It was always just a fantasy that I'd get around to eventually or a dream just out of reach. In my mind, this project culminates everything I'm working towards in my degree. When I started out as a freshman at Pitt, I had no idea what I wanted to do or if I even wanted to be an electrical engineer at all. This project showed me what it means to be an engineer: weeks of struggle and late nights of confusion, but also learning new things and stepping out of my comfort zone. By pushing myself to my limits, I experienced so much growth in this field and gained so much confidence in myself and what I can do. My advice for anyone interested in trying something like this: *take the first step*. You may not get it right on the first try (or the second or third), but what matters is learning from that experience. There is so much knowledge to be gained from new experiences, all you have to do is start.
+I never thought in a million years that I would be able to say that I built my own guitar pedal. It was 
+always just a fantasy that I'd get around to eventually or a dream just out of reach. In my mind, this 
+project culminates everything I'm working towards in my degree. When I started out as a freshman 
+at Pitt, I had no idea what I wanted to do or if I even wanted to be an electrical engineer at all. This 
+project showed me what it means to be an engineer: weeks of struggle and late nights of 
+confusion, but also learning new things and stepping out of my comfort zone. By pushing myself to 
+my limits, I experienced so much growth in this field and gained so much confidence in myself and 
+what I can do. My advice for anyone interested in trying something like this: *take the first step*. You 
+may not get it right on the first try (or the second or third), but what matters is learning from that 
+experience. There is so much knowledge to be gained from new experiences, all you have to do is 
+start.
 
 <figure>
   <img src="/assets/img/Pedal_Writeup_Images/Clean_Pedal.JPG" alt="Finished fuzz pedal in the enclosure and looking good.">
