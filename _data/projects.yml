@@ -35,7 +35,7 @@
   repo: ""
   demo: ""
   image: ""
-  writeup: "/_posts/2026-07-10-guitar-pedal.md"
+  writeup: "/blog/2026/07/10/guitar-pedal/"
   year: 2026
 
 - name: Vintage Amplifier Rebuild
@@ -54,7 +54,7 @@
   tags: [Guitar, Soldering, Woodworking]
   repo: ""
   demo: ""
-  image: "/assets/img/guitar.jpg"
+  image: "/assets/img/guitar.JPG"
   writeup: ""
   year: 2026
 
