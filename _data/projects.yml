@@ -3,6 +3,7 @@
 # Software
 - name: Portfolio Website
   category: software
+  featured: true
   description: "Created a website portfolio and blog built with Jekyll using HTML and CSS, hosted on GitHub Pages."
   tags: [HTML, CSS, Jekyll, Portfolio, Website Design]
   repo: https://github.com/LucasBucht/LucasBucht.github.io
@@ -13,6 +14,7 @@
 
 - name: VHDL ALU Calculator
   category: software
+  featured: true
   description: "Built a complete datapathin Siemens HDL Designer, including a 4x8 register and ALU."
   tags: [VHDL, ALU, Datapath, ModelSim, Quartus Prime, DE10-Lite FPGA]
   repo: https://github.com/LucasBucht/Pitt-ECE0201/tree/main/Datapath_and_Control
@@ -30,6 +32,7 @@
 # Hardware
 - name: Fuzz Guitar Pedal
   category: hardware
+  featured: true
   description: "Designed, prototyped, built, and revised a custom fuzz pedal using an LM386 op-amp clipping circuit."
   tags: [Prototyping, Signal Processing, Altium Designer, Analog Circuit Design]
   repo: ""
@@ -40,6 +43,7 @@
 
 - name: Vintage Amplifier Rebuild
   category: hardware
+  featured: true
   description: "Rebuilt internals of a vintage amp by recapping, fixing lifting solder pads, and adjusting the bias control to prevent distortion."
   tags: [Amplifier, Debugging, Soldering, Signal Processing]
   repo: ""
@@ -50,6 +54,7 @@
 
 - name: Squier Mustang Custom Guitar Build
   category: hardware
+  featured: false
   description: "Wired, finished, and assembled a Squier Mustang guitar with a custom series/parallel pickup switch and sheilded cavity."
   tags: [Guitar, Soldering, Woodworking]
   repo: ""
@@ -60,6 +65,7 @@
 
 - name: Sump Pump Exit Pipe One-Way Valve
   category: hardware
+  featured: false
   description: "Designed, measured, and CADed a one way valve for a sump pump exit pipe to allow water and particulants through while preventing backflow or clogging."
   tags: [CAD, Prototyping, 3D-Printing, Fusion 360]
   repo: 

@@ -35,8 +35,7 @@ layout: default
   <span class="section-label__line"></span>
 </div>
 <section class="wrap">
-  {% assign hardware_sorted = hardware | sort: "year" | reverse %}
-  {% assign featured_hw = hardware_sorted | slice: 0, 2 %}
+  {% assign featured_hw = hardware | where: "featured", true %}
   {% include project-grid.html projects=featured_hw %}
 </section>
 
@@ -46,8 +45,7 @@ layout: default
   <span class="section-label__line"></span>
 </div>
 <section class="wrap">
-  {% assign software_sorted = software | sort: "year" | reverse %}
-  {% assign featured_sw = software_sorted | slice: 0, 2 %}
+  {% assign featured_sw = software | where: "featured", true %}
   {% include project-grid.html projects=featured_sw %}
   <p class="see-all"><a href="{{ '/projects/' | relative_url }}">all projects &rarr;</a></p>
 </section>
