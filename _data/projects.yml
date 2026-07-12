@@ -34,8 +34,8 @@
   tags: [Prototyping, Signal Processing, Altium Designer, Analog Circuit Design]
   repo: ""
   demo: ""
-  image: ""
-  writeup: "/blog/2026/07/10/guitar-pedal/"
+  image: "/assets/img/pedal.JPG"
+  writeup: "/blog/2026/07/12/fuzz-pedal/"
   year: 2026
 
 - name: Vintage Amplifier Rebuild
