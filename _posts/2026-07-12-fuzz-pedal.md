@@ -39,7 +39,7 @@ the input and fuzz signal to allow for blending the two together.
   <figcaption>Fuzz Circuit Simulation in Altium Designer - Lucas Bucht 2026</figcaption>
 </figure>
 
-Testing the completed circuit in Altium, I had come up with a circuit design that checked all the boxes: high  
+Testing the completed circuit in Altium, I had come up with a circuit design that checked all the boxes: high 
 dynamics with a smooth bottom, blend capabilities, and a sweet fuzz tone that cuts through the 
 mix. To ensure the pedal would work when I assembled it, I simulated different frequencies to 
 understand how the signal would react to the highs of a guitar and the lows of a bass. Across those 
