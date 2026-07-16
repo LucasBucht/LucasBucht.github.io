@@ -136,7 +136,7 @@ a:focus-visible, button:focus-visible {
 .dot--status { background: var(--slate); }
 .hero__bio { max-width: 100%; }
 
-/* ---- Section label (replaces the old diff-hunk divider) ---- */
+/* ---- Section label ---- */
 .section-label {
   display: flex;
   align-items: center;
@@ -157,7 +157,7 @@ a:focus-visible, button:focus-visible {
   background: var(--rule);
 }
 
-/* ---- Filter bar (projects page only) ---- */
+/* ---- Filter bar  ---- */
 .filter-bar {
   display: flex;
   gap: 8px;
