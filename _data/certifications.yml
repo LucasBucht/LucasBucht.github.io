@@ -1,10 +1,8 @@
-# Certifications shown as badges on the homepage, right under your degree line.
-#
-# url is optional — link to a verification page/credential if you have one,
-# leave "" if there's nothing to link to.
-#
-# Delete this placeholder and add your real certifications below.
-
+- name: "Artificial Intelligence Fundamentals"
+  issuer: "IBM"
+  date: 2026
+  url: "https://www.credly.com/badges/b240548e-046a-4e90-a6f8-b38ce45981d1"
+  
 - name: "Career Essentials in Generative AI by Microsoft and LinkedIn"
   issuer: "Linkedin Learning"
   date: 2026
