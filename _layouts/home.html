@@ -14,6 +14,17 @@ layout: default
   <p class="hero__credentials">
     B.S. Electrical Engineering, University of Pittsburgh — Class of 2028
   </p>
+  {% if site.data.certifications and site.data.certifications.size > 0 %}
+  <div class="hero__certifications">
+    {% for cert in site.data.certifications %}
+      {% if cert.url and cert.url != "" %}
+      <a class="cert-badge" href="{{ cert.url }}" target="_blank" rel="noopener">{{ cert.name }}</a>
+      {% else %}
+      <span class="cert-badge">{{ cert.name }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
   <p class="hero__bio">
     I'm a junior electrical engineering student at the University of Pittsburgh who'd rather build something than buy it. 
     I've designed a guitar fuzz pedal around an LM386 analog signal path, hand-built a guitar, restored vintage amplifiers, 

@@ -122,6 +122,26 @@ a:focus-visible, button:focus-visible {
   color: var(--ink-soft);
   margin: -14px 0 22px;
 }
+.hero__certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 22px;
+}
+.cert-badge {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--ink-soft);
+}
+a.cert-badge:hover {
+  border-color: var(--slate);
+  color: var(--slate);
+  text-decoration: none;
+}
 .hero__status {
   display: flex;
   align-items: flex-start;

@@ -84,6 +84,30 @@ Hardware projects are visual — a fuzz pedal without a picture undersells it.
 ```
  
 ---
+
+## Adding a certification
+
+Certifications show as small badges on the homepage, right under your degree
+line. Everything lives in **`_data/certifications.yml`** — same pattern as
+projects, edit one file, no template changes needed.
+
+```yaml
+- name: "Certification Name"
+  issuer: "Issuing Organization"
+  date: 2026
+  url: ""
+```
+
+- **`url`** is optional. If you have a real credential/verification link
+  (Credly, an issuer's verification page, etc.), add it and the badge becomes
+  clickable. Leave `""` for a plain, non-clickable badge.
+- **`issuer`** and **`date`** aren't currently displayed on the badge itself
+  (the badge just shows `name`), they're there for your own reference and in
+  case a future design change wants to surface them (e.g. as a tooltip).
+- No limit on how many you add — they'll wrap onto a new line automatically
+  if the row gets full.
+ 
+---
  
 ## Writing a blog post
  
@@ -211,4 +235,8 @@ Without it, that layout renders standalone and never nests inside
 **A project isn't showing up on the homepage or `/projects/`** — check its
 `category` field in `_data/projects.yml` is present and spelled exactly
 `software` or `hardware`.
+
+**A certification badge isn't showing up** — check `_data/certifications.yml`
+has a `name` field for it and that the file's indentation matches the other
+entries; a bad indent can silently drop an entry from the list.
  

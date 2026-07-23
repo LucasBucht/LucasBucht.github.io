@@ -1,0 +1,11 @@
+# Certifications shown as badges on the homepage, right under your degree line.
+#
+# url is optional — link to a verification page/credential if you have one,
+# leave "" if there's nothing to link to.
+#
+# Delete this placeholder and add your real certifications below.
+
+- name: "Career Essentials in Generative AI by Microsoft and LinkedIn"
+  issuer: "Linkedin Learning"
+  date: 2026
+  url: "https://www.linkedin.com/learning/certificates/b48354463401ef69bfc0b483ad8ea25d03cb9214c3bce233ff38df1be418496a?u=2252458"
