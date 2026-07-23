@@ -87,9 +87,10 @@ Hardware projects are visual — a fuzz pedal without a picture undersells it.
 
 ## Adding a certification
 
-Certifications show as small badges on the homepage, right under your degree
-line. Everything lives in **`_data/certifications.yml`** — same pattern as
-projects, edit one file, no template changes needed.
+Certifications get their own section on the homepage, between Software and
+Writing, since they matter more than a blog post but less than a project.
+Each row shows the date, the certification name (linked, if `url` is set),
+and the issuer.
 
 ```yaml
 - name: "Certification Name"
@@ -99,13 +100,14 @@ projects, edit one file, no template changes needed.
 ```
 
 - **`url`** is optional. If you have a real credential/verification link
-  (Credly, an issuer's verification page, etc.), add it and the badge becomes
-  clickable. Leave `""` for a plain, non-clickable badge.
-- **`issuer`** and **`date`** aren't currently displayed on the badge itself
-  (the badge just shows `name`), they're there for your own reference and in
-  case a future design change wants to surface them (e.g. as a tooltip).
-- No limit on how many you add — they'll wrap onto a new line automatically
-  if the row gets full.
+  (Credly, an issuer's verification page, etc.), add it and the name becomes
+  clickable. Leave `""` for a plain, non-clickable name.
+- **`date`** and **`issuer`** both display directly in the list row — date on
+  the left, issuer on the right, same layout as the Writing section's post
+  list.
+- No limit on how many you add.
+- The whole section only renders if `_data/certifications.yml` has at least
+  one entry — an empty or missing file just skips the section cleanly.
  
 ---
  

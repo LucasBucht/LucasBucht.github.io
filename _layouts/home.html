@@ -14,17 +14,6 @@ layout: default
   <p class="hero__credentials">
     B.S. Electrical Engineering, University of Pittsburgh — Class of 2028
   </p>
-  {% if site.data.certifications and site.data.certifications.size > 0 %}
-  <div class="hero__certifications">
-    {% for cert in site.data.certifications %}
-      {% if cert.url and cert.url != "" %}
-      <a class="cert-badge" href="{{ cert.url }}" target="_blank" rel="noopener">{{ cert.name }}</a>
-      {% else %}
-      <span class="cert-badge">{{ cert.name }}</span>
-      {% endif %}
-    {% endfor %}
-  </div>
-  {% endif %}
   <p class="hero__bio">
     I'm a junior electrical engineering student at the University of Pittsburgh who'd rather build something than buy it. 
     I've designed a guitar fuzz pedal around an LM386 analog signal path, hand-built a guitar, restored vintage amplifiers, 
@@ -60,6 +49,29 @@ layout: default
   {% include project-grid.html projects=featured_sw %}
   <p class="see-all"><a href="{{ '/projects/' | relative_url }}">all projects &rarr;</a></p>
 </section>
+
+{% if site.data.certifications and site.data.certifications.size > 0 %}
+<div class="section-label wrap">
+  <span class="dot dot--status"></span>
+  <span class="section-label__text">Certifications</span>
+  <span class="section-label__line"></span>
+</div>
+<section class="wrap">
+  <ul class="cert-list">
+    {% for cert in site.data.certifications %}
+    <li class="cert-list__row">
+      {% if cert.date %}<span class="cert-list__date">{{ cert.date }}</span>{% endif %}
+      {% if cert.url and cert.url != "" %}
+      <a class="cert-list__title" href="{{ cert.url }}" target="_blank" rel="noopener">{{ cert.name }}</a>
+      {% else %}
+      <span class="cert-list__title">{{ cert.name }}</span>
+      {% endif %}
+      {% if cert.issuer %}<span class="cert-list__issuer">{{ cert.issuer }}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 
 <div class="section-label wrap">
   <span class="section-label__text">Writing</span>

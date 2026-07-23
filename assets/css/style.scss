@@ -123,25 +123,12 @@ a:focus-visible, button:focus-visible {
   margin: -14px 0 22px;
 }
 .hero__certifications {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: -6px 0 22px;
-}
-.cert-badge {
   font-family: var(--mono);
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 14px;
-  border: 1px solid var(--rule);
-  background: var(--panel);
+  font-size: 13px;
   color: var(--ink-soft);
+  margin: -14px 0 22px;
 }
-a.cert-badge:hover {
-  border-color: var(--slate);
-  color: var(--slate);
-  text-decoration: none;
-}
+.hero__certifications a { color: var(--teal); }
 .hero__status {
   display: flex;
   align-items: flex-start;
@@ -273,6 +260,41 @@ a.cert-badge:hover {
 .project-card__links { display: flex; gap: 14px; font-size: 13px; font-weight: 500; }
 
 .see-all { margin-top: 18px; font-size: 14px; }
+
+/* ---- Certification list (mirrors post-list styling) ---- */
+.cert-list { list-style: none; margin: 0; padding: 0; }
+.cert-list__row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.cert-list__date {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  width: 50px;
+}
+.cert-list__title {
+  color: var(--ink);
+  font-weight: 500;
+  flex-grow: 1;
+}
+.cert-list__title:hover { color: var(--teal); }
+.cert-list__issuer {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  text-align: right;
+}
+@media (max-width: 560px) {
+  .cert-list__row { flex-direction: column; gap: 2px; }
+  .cert-list__date { width: auto; }
+  .cert-list__issuer { text-align: left; }
+}
 
 /* ---- Post list ---- */
 .post-list { list-style: none; margin: 0; padding: 0; }
