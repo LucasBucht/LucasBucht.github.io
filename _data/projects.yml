@@ -10,10 +10,10 @@
   writeup: ""
   year: 2026
 
-- name: Abstract Elevator Control System in Assembly and C
+- name: Abstract Parking Garage Control System in Assembly and C
   category: software
   featured: true
-  description: "Designed and implemented an abstract elevator control system using Assembly and C on a NUCLEO microcontroller."
+  description: "Designed and implemented an abstract parking garage control system using Assembly and C on a NUCLEO microcontroller."
   tags: [Assembly, C, Microcontroller, Control Systems, Embedded Systems, NUCLEO]
   repo: https://github.com/LucasBucht/ECE0202_FinalProject/tree/main
   demo: ""
