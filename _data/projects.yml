@@ -10,9 +10,20 @@
   writeup: ""
   year: 2026
 
-- name: VHDL ALU Calculator
+- name: Abstract Elevator Control System in Assembly and C
   category: software
   featured: true
+  description: "Designed and implemented an abstract elevator control system using Assembly and C on a NUCLEO microcontroller."
+  tags: [Assembly, C, Microcontroller, Control Systems, Embedded Systems, NUCLEO]
+  repo: https://github.com/LucasBucht/ECE0202_FinalProject/tree/main
+  demo: ""
+  image: ""
+  writeup: ""
+  year: 2026
+
+- name: VHDL ALU Calculator
+  category: software
+  featured: false
   description: "Built a complete datapathin Siemens HDL Designer, including a 4x8 register and ALU."
   tags: [VHDL, ALU, Datapath, ModelSim, Quartus Prime, DE10-Lite FPGA]
   repo: https://github.com/LucasBucht/Pitt-ECE0201/tree/main/Datapath_and_Control
