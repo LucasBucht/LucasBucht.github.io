@@ -65,6 +65,5 @@ Succeeding here showed that the ideas I had were important to the final design, 
   <video controls width="100%">
     <source src="/assets/video/CoverInAction.mp4" type="video/mp4">
   </video>
-  <figcaption>Sump Pump Exit Pipe One-Way Valve Fully Operational - Lucas Bucht 2025</figcaption>
+  <figcaption>Valve opening under flow, closing once water stops.</figcaption>
 </figure>
-
