@@ -1,3 +1,8 @@
+- name: "Altium Education Course Quiz"
+  issuer: "Altium Education"
+  date: 2026
+  url: "/assets/certificate-of-completion-for-altium-education-cumulative-quiz.pdf"
+
 - name: "Artificial Intelligence Fundamentals"
   issuer: "IBM"
   date: 2026
