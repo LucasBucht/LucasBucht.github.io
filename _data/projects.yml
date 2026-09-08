@@ -24,16 +24,13 @@
 - name: VHDL ALU Calculator
   category: software
   featured: false
-  description: "Built a complete datapathin Siemens HDL Designer, including a 4x8 register and ALU."
+  description: "Built a complete datapath in Siemens HDL Designer, including a 4x8 register and ALU."
   tags: [VHDL, ALU, Datapath, ModelSim, Quartus Prime, DE10-Lite FPGA]
   repo: https://github.com/LucasBucht/Pitt-ECE0201/tree/main/Datapath_and_Control
   demo: ""
   image: ""
   writeup: ""
   year: 2025
-
-
-
 
 
 
@@ -77,7 +74,7 @@
   featured: false
   description: "Designed, measured, and CADed a one way valve for a sump pump exit pipe to allow water and particulants through while preventing backflow or clogging."
   tags: [CAD, Prototyping, 3D-Printing, Fusion 360]
-  repo: 
+  repo: ""
   demo: ""
   image: "/assets/img/Sump_Pump.png"
   writeup: "/blog/2026/05/30/sump-pump/"
