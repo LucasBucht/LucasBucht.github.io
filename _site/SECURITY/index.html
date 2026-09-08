@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Security Policy | Lucas Bucht</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Security Policy" />
+<meta name="author" content="Lucas Bucht" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal portfolio and blog, built with Jekyll, hosted on GitHub Pages." />
+<meta property="og:description" content="Personal portfolio and blog, built with Jekyll, hosted on GitHub Pages." />
+<link rel="canonical" href="http://localhost:4000/SECURITY/" />
+<meta property="og:url" content="http://localhost:4000/SECURITY/" />
+<meta property="og:site_name" content="Lucas Bucht" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Security Policy" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Lucas Bucht"},"description":"Personal portfolio and blog, built with Jekyll, hosted on GitHub Pages.","headline":"Security Policy","url":"http://localhost:4000/SECURITY/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/css/style.css?v=1788869338">
+  <link rel="alternate" type="application/rss+xml" title="Lucas Bucht" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="/">
+      Lucas Bucht
+    </a>
+    <nav class="site-nav">
+      <a href="/" >home</a>
+      <a href="/projects/" >projects</a>
+      <a href="/blog/" >write-ups</a>
+      <a href="https://github.com/lucasbucht" target="_blank" rel="noopener">github</a>
+      <a href="/assets/Lucas_Bucht_Resume.pdf" target="_blank" rel="noopener">resume</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="site-main">
+    <h1 id="security-policy">Security Policy</h1>
+
+<p>This repository builds <a href="https://lucasbucht.github.io">lucasbucht.github.io</a>, a
+static personal portfolio and blog. There’s no backend, no database, no user
+accounts, and no form that submits data anywhere — content is Markdown/YAML
+compiled by Jekyll into static HTML, served directly by GitHub Pages.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>Given the above, most traditional web vulnerability classes (SQL injection,
+auth bypass, session hijacking, etc.) don’t apply here — there’s no server-side
+logic or data store to attack. Realistic areas of concern are limited to:</p>
+
+<ul>
+  <li><strong>Dependency vulnerabilities</strong> in the Ruby gems this site builds with
+(<code class="language-plaintext highlighter-rouge">Gemfile</code> / <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>) — for example a <code class="language-plaintext highlighter-rouge">jekyll</code> or plugin version with
+a known CVE.</li>
+  <li><strong>Client-side JavaScript issues</strong> — this site includes a small vanilla JS
+tag filter on the <code class="language-plaintext highlighter-rouge">/projects/</code> page, and no other custom scripts. Any XSS
+or injection risk would have to come from there.</li>
+  <li><strong>Exposed secrets</strong> — API keys, tokens, or credentials accidentally
+committed to the repo. There shouldn’t be any, since the site has no API
+integrations, but flag it if you spot one.</li>
+</ul>
+
+<p>There is no supported-version table because there’s only ever one live
+version: whatever is currently deployed from <code class="language-plaintext highlighter-rouge">main</code>.</p>
+
+<h2 id="reporting-a-vulnerability">Reporting a Vulnerability</h2>
+
+<p>If you find something in scope above, please open a
+<a href="https://github.com/LucasBucht/LucasBucht.github.io/issues">GitHub issue</a> on
+this repo, or reach out directly via the email listed on
+<a href="https://lucasbucht.github.io">the site itself</a>.</p>
+
+<p>This is a personal project maintained by one person (me), so response time
+is best-effort rather than guaranteed, but I’ll take a look and patch
+promptly if it’s a real issue. There’s no bug bounty, just my thanks.</p>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span>&copy; 2026 Lucas Bucht</span>
+    <div class="site-footer__links">
+      <a href="https://github.com/lucasbucht" target="_blank" rel="noopener">GitHub</a>
+      
+        <a href="https://www.linkedin.com/in/lucasbucht/" target="_blank" rel="noopener">LinkedIn</a>
+      
+      
+        <a href="mailto:buchtlu@gmail.com">Email</a>
+      
+      <a href="/feed.xml">RSS</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
