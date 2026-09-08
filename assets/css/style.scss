@@ -9,7 +9,7 @@
 
   --teal: #2B5F6B;
   --teal-soft: #E4EEF0;
-  --amber: #B8720F;
+  --amber: #8A5A0C;
   --amber-soft: #F5EBD9;
   --slate: #6B6F76;
 
@@ -154,9 +154,11 @@ a:focus-visible, button:focus-visible {
 .section-label__text {
   font-family: var(--mono);
   font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
+  margin: 0;
 }
 .section-label__line {
   flex-grow: 1;
