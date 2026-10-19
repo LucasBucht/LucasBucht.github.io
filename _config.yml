@@ -33,6 +33,12 @@ defaults:
     values:
       layout: "default"
 
+google_fonts:
+  - "Schibsted+Grotesk:wght@400;500;600;700"
+  - "Inter:wght@400;500;600"
+  - "JetBrains+Mono:wght@400;500"
+  - "IBMPlex+Sans:wght@400;500;600"
+
 exclude:
   - Gemfile
   - Gemfile.lock
