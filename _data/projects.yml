@@ -36,14 +36,25 @@
 
 
 # Hardware
-- name: Fuzz Guitar Pedal
+- name: Phase 90 Clone Guitar Pedal
   category: hardware
   featured: true
+  description: "Designed a PCB for a custom Phase 90 pedal circuit including a 555-timer-based LFO."
+  tags: [PCB Design, Analog Circuit Design, Signal Processing, Altium Designer, Prototyping]
+  repo: ""
+  demo: ""
+  image: "/assets/img/phaserpedal.JPG"
+  writeup: "/blog/2026/10/26/555-phaser/"
+  year: 2026
+
+- name: Fuzz Guitar Pedal
+  category: hardware
+  featured: false
   description: "Designed, prototyped, built, and revised a custom fuzz pedal using an LM386 op-amp clipping circuit."
   tags: [Prototyping, Signal Processing, Altium Designer, Analog Circuit Design]
   repo: ""
   demo: ""
-  image: "/assets/img/pedal.JPG"
+  image: "/assets/img/fuzzpedal.JPG"
   writeup: "/blog/2026/07/12/fuzz-pedal/"
   year: 2026
 
